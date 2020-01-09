@@ -16,10 +16,18 @@ public class LibraryTest {
 
 
     @Test
-    public void roll() {
-        Library.roll(5);
-        for
+    public void testRollMethod() {
+int number = 4;
+int[] result = Library.roll(number);
+assertEquals(number,result.length);
+    }
 
+    @Test public void testRollBetweenOneAndSix(){
+        int[] result = Library.roll(3);
+      for(int number : result ){
+          boolean actual = number > 0 && number<7;
+          assertTrue(actual);
+      }
 
     }
 }

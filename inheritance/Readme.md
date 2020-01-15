@@ -18,4 +18,8 @@ In today’s lab, I created classes and interfaces to represent reviews of resta
 ### The method I chose was that a Restaurant knows which Reviews are about it
 - Created the method should take in a Review instance, and associate that review with this Restaurant. 
 - Added tests to ensure that when you call addReview, the association is created between the Restaurant and the Review.
-- When I associate a review with a restaurant, that restaurant’s star rating  changes. 
+- When I associate a review with a restaurant, that restaurant’s star rating  changes.
+
+##Wendsday Lab:
+
+Created 2 new classes with the constructors and reviews and testing cases  

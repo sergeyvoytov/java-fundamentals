@@ -1,8 +1,6 @@
 package basiclibrary;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Maps {
 
@@ -28,17 +26,22 @@ public class Maps {
     }
 
 
-
-
-//
-//    public static String tally(ArrayList<String> votes) {
-//
-//
-//
-//
-//
-//
-//        return ;
-//    }
-
+    public static String tally(ArrayList<String> results) {
+        HashMap<String, Integer> votes = new HashMap<>();
+        for (String result : results) {
+            votes.put(result, 0);
+        }
+        for (String result : results) {
+            votes.put(result, votes.get(result) + 1);
+        }
+        int winningCount = 0;
+        String president = "";
+        for (String contestant : votes.keySet()) {
+            if (votes.get(contestant) > winningCount) {
+                winningCount = votes.get(contestant);
+                president = contestant;
+            }
+        }
+        return president;
+    }
 }
